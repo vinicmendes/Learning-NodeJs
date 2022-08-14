@@ -1,0 +1,15 @@
+{
+  "name": "aprendendo_node",
+  "version": "1.0.0",
+  "description": "Primeiro projeto com node",
+  "main": "index.js",
+  "scripts": {
+    "dev" : "nodemon app.js"
+  },
+  "author": "Vinícius Mendes",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19"
+  }
+}
