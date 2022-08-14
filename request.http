@@ -2,10 +2,31 @@ POST http://localhost:4002/products
 content-Type: application/json
 
 {
-    "name": "Product 2",
-    "price": "12.00"
+    "name": "Product 3",
+    "price": "123.00"
 }
 
 ###
 
 GET http://localhost:4002/products
+
+
+###
+
+GET http://localhost:4002/products/7785a2ee-5863-4734-85ab-a8d6c163d221
+
+
+###
+
+
+PUT http://localhost:4002/products/7785a2ee-5863-4734-85ab-a8d6c163d221
+content-Type: application/json
+
+{
+    "name": "Product 4",
+    "price": "6.00"
+}
+
+###
+
+DELETE http://localhost:4002/products/ce7d568c-f6e2-4057-a453-bbbf092816bc
