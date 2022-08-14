@@ -37,13 +37,7 @@ app.post("/products", (req, res) => {
 
     products.push(product);
 
-    fs.writeFile("products.json", JSON.stringify(products), (err) => {
-        if (err) {
-            console.log(err)
-        } else {
-            console.log("Arquivo salvo com sucesso")
-        }
-    });
+    productFile();
 
     return res.json(product);
 });
@@ -74,6 +68,7 @@ app.put("/products/:id", (req, res) => {
         price
     };
 
+    productFile();
 
     return res.json({ message: "Product updated" });
 });
@@ -85,8 +80,20 @@ app.delete("/products/:id", (req, res) => {
 
     products.splice(productIndex, 1);
 
+    productFile();
+
     return res.json({ message: "Product deleted" });
 })
+
+function productFile(){
+    fs.writeFile("products.json", JSON.stringify(products), (err) => {
+        if (err) {
+            console.log(err)
+        } else {
+            console.log("Arquivo salvo com sucesso")
+        }
+    });
+}
 
 app.listen(4002, () => console.log("O servidor está rodando na porta 4002"));
 
