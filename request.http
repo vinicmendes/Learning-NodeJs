@@ -2,6 +2,10 @@ POST http://localhost:4002/products
 content-Type: application/json
 
 {
-    "name": "Product 1",
-    "price": "100.00"
+    "name": "Product 2",
+    "price": "12.00"
 }
+
+###
+
+GET http://localhost:4002/products

@@ -35,5 +35,9 @@ app.post("/products", (req, res) => {
     return res.json(product);
 });
 
+app.get("/products", (req, res) => {
+    return res.json(products);
+});
+
 app.listen(4002, () => console.log("O servidor está rodando na porta 4002"));
 
